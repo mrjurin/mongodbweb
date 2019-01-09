@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title><%=title%></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <table>
+        <thead>
+            <th>
+                <td>Bil</td>
+                <td>Name</td>
+                <td>Gender</td>
+                <td>Age</td>
+                <td>Hobby</td>
+                <td>Action</td>
+            </th>
+        </thead>
+        <tbody>
+                <% customers.forEach(function(customer,index){ %>
+                    <tr>
+                    <td><%=index + 1%></td>
+                       <td><%=customer.name%></td>
+                       <td><%=customer.gender%></td>
+                       <td><%=customer.age%></td>
+                       <td><%=customer.hoby%></td>
+                       <td>
+                           <a href="/edit_customer/<%=customer._id%>">Edit</a>
+                           <a href="/confirm_delete/<%=customer._id%>">Delete</a>                           
+                        </td> 
+                       
+                    </tr>
+                  <% }); %>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">
+                    Total Customer <%=customers.length%>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+   
+    <br>
+    <a href="/create_customer">Create New</a>
+  </body>
+</html>

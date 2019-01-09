@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Delete Confirmation</h1>
+    <form method="POST" action="/delete_customer">
+        <input type="hidden" name="_id" value="<%=customer._id%>">
+        <p>Are you sure to delete? This action cannot be undone</p>
+        <button type="submit">Confirm Deletion</button>
+    </form>
+  </body>
+</html>

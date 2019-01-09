@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Customer</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Edit Customer</h1>
+    <form method="POST" action="/update_customer">
+        <input type="hidden" name="_id" value="<%=customer._id%>">
+        <label>Name</label>
+        <input type="text" name="name" value="<%=customer.name%>" id="name"> <br>
+        <label>Gender</label>
+        <input type="text" name="gender" value="<%=customer.gender%>" id="gender"> <br>
+        <label>Age</label>
+        <input type="text" name="age" value="<%=customer.age%>" id="age"> <br>
+        <label>Hoby</label>
+        <input type="text" name="hoby" value="<%=customer.hoby%>" id="hoby"> <br>
+        <button type="submit">Update</button>
+    </form>
+  </body>
+</html>
