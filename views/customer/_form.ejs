@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Create Customer</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1>Create Customer</h1>
-    <form method="POST" action="/save_customer">
-        <label>Name</label>
-        <input type="text" name="name" id="name"> <br>
-        <label>Gender</label>
-        <input type="text" name="gender" id="gender"> <br>
-        <label>Age</label>
-        <input type="text" name="age" id="age"> <br>
-        <label>Hoby</label>
-        <input type="text" name="hoby" id="hoby"> <br>
-        <input type="submit" name="Save">
-    </form>
-  </body>
-</html>
+<label>Name</label>
+<input type="text" name="name" id="name" value="<%=customer.name%>"> <br>
+<label>Gender</label>
+<input type="text" name="gender" id="gender" value="<%=customer.gender%>"> <br>
+<label>Age</label>
+<input type="text" name="age" id="age" value="<%=customer.age%>"> <br>
+<label>Hoby</label>
+<input type="text" name="hoby" id="hoby" value="<%=customer.hoby%>"> <br>
+<label>Job</label>
+<input type="text" name="job" id="job" value="<%=customer.job%>"> <br>
+<label>Education</label>
+<input type="text" name="education" id="education" value="<%=customer.education%>"> <br>
+<button type="submit"><%=action%></button>

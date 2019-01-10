@@ -5,9 +5,12 @@
   </head>
   <body>
     <h1>Delete Confirmation</h1>
-    <form method="POST" action="/delete_customer">
-        <input type="hidden" name="_id" value="<%=customer._id%>">
-        <p>Are you sure to delete? This action cannot be undone</p>
+    <form method="POST" action="/customer/delete">
+        <input type="hidden" name="_id" value="<%=_id%>">
+
+        <p>Are you sure to delete <strong><%=_id%></strong>? This action cannot be undo, please be warned. 
+          I will not help any of you if the deletion is not 
+          <font style="font-weight:bold;color:red;">intentionally</font> executed</p>
         <button type="submit">Confirm Deletion</button>
     </form>
   </body>

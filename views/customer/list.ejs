@@ -13,6 +13,7 @@
                 <td>Gender</td>
                 <td>Age</td>
                 <td>Hobby</td>
+                <td>Job</td>
                 <td>Action</td>
             </th>
         </thead>
@@ -24,9 +25,10 @@
                        <td><%=customer.gender%></td>
                        <td><%=customer.age%></td>
                        <td><%=customer.hoby%></td>
+                       <td><%=customer.job%></td>
                        <td>
-                           <a href="/edit_customer/<%=customer._id%>">Edit</a>
-                           <a href="/confirm_delete/<%=customer._id%>">Delete</a>                           
+                           <a href="/customer/edit/<%=customer._id%>">Edit</a>
+                           <a href="/customer/confirm_delete/<%=customer._id%>">Delete</a>                           
                         </td> 
                        
                     </tr>
@@ -42,6 +44,6 @@
     </table>
    
     <br>
-    <a href="/create_customer">Create New</a>
+    <a href="/customer/new">Create New</a>
   </body>
 </html>

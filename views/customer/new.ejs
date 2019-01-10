@@ -1,1 +1,13 @@
-<%- include('_form'); %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Customer</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Create Customer</h1>
+    <form method="POST" action="/customer/store">
+        <%- include('_form',{customer:{},action:"Create"}) %>
+    </form>
+  </body>
+</html>
